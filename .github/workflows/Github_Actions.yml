@@ -13,16 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-<<<<<<< HEAD
-      matrix:
-        node-version: [14.x]
-    
-=======
       # Node versions list
       matrix:
         node-version: [14.x]
 
->>>>>>> ef3353822c637c082e937f2d40931e2506298673
+
     steps:
         # Check-out repository under GitHub workspace
         # https://github.com/actions/checkout
