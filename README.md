@@ -7,4 +7,4 @@ The collection of command line games. My first project on [Hexlet](https://ru.he
 ##
 
 • brain-even
-<script id="asciicast-zWyie9YqZcI0QsYEw38GC9tfA" src="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA.js" async></script>
+<a href="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA" target="_blank"><img src="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA.svg" /></a>
