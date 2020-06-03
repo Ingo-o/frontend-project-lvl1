@@ -5,3 +5,6 @@
 ##
 The collection of command line games. My first project on [Hexlet](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=nodejs-package).
 ##
+
+• brain-even
+<script id="asciicast-zWyie9YqZcI0QsYEw38GC9tfA" src="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA.js" async></script>
