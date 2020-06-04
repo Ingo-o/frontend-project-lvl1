@@ -27,7 +27,7 @@ const game = () => {
       console.log('Correct!');
       correctAnswerCount += 1;
     } else {
-      console.log(`"${answer}" is wrong answer :( ... Correct answer was "${correctAnswer}".`);
+      console.log(`"${answer}" is a wrong answer :( ... Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
