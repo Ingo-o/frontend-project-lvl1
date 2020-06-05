@@ -4,6 +4,9 @@ export const randomNum10 = () => Math.ceil(Math.random() * (10));
 // Генерация случайного числа от 1 до 100
 export const randomNum100 = () => Math.ceil(Math.random() * (100));
 
+// Генерация случайного числа от 1 до 1000
+export const randomNum1000 = () => Math.ceil(Math.random() * (1000));
+
 // Генерация случайного оператора (+, -, *)
 export const randomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -49,4 +52,18 @@ export const progression10 = (start, step) => {
     result.push(start + (i * step));
   }
   return result;
+};
+
+// Функция определяет, является ли число простым (yes/no)
+export const isPrime = (num) => {
+  if (num < 2) {
+    return 'no';
+  }
+
+  for (let div = 2; div <= num / 2; div += 1) {
+    if (num % div === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
 };

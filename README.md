@@ -4,6 +4,11 @@
 The collection of command line games. My first project on [Hexlet](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=nodejs-package).
 ##
 
+## How to play:
+You can choose one of five games.
+Do as shown in the video, but don't write "**exit**" at the end!
+Good luck and may the Force be with you! ✊
+
 • brain-even
 <a href="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA" target="_blank"><img src="https://asciinema.org/a/zWyie9YqZcI0QsYEw38GC9tfA.svg" /></a>
 
@@ -15,3 +20,6 @@ The collection of command line games. My first project on [Hexlet](https://ru.he
 
 • brain-prog
 <a href="https://asciinema.org/a/dpI7lQm1vL28nIUERWx1GtMNU" target="_blank"><img src="https://asciinema.org/a/dpI7lQm1vL28nIUERWx1GtMNU.svg" /></a>
+
+• brain-prime
+<a href="https://asciinema.org/a/MNDdBmDPHLROUgG6iOh5BwaTT" target="_blank"><img src="https://asciinema.org/a/MNDdBmDPHLROUgG6iOh5BwaTT.svg" /></a>
