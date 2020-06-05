@@ -12,3 +12,6 @@ The collection of command line games. My first project on [Hexlet](https://ru.he
 
 • brain-gcd
 <a href="https://asciinema.org/a/r87PqahwxsYkDebhAxEudi14O" target="_blank"><img src="https://asciinema.org/a/r87PqahwxsYkDebhAxEudi14O.svg" /></a>
+
+• brain-prog
+<a href="https://asciinema.org/a/dpI7lQm1vL28nIUERWx1GtMNU" target="_blank"><img src="https://asciinema.org/a/dpI7lQm1vL28nIUERWx1GtMNU.svg" /></a>

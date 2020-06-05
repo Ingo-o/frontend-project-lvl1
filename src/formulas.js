@@ -41,3 +41,12 @@ export const gcd = (a, b) => {
   }
   return gcd(b, a % b);
 };
+
+// Построение массива с арифметической прогрессией из 10 чисел
+export const progression10 = (start, step) => {
+  const result = [];
+  for (let i = 0; i < 10; i += 1) {
+    result.push(start + (i * step));
+  }
+  return result;
+};
