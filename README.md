@@ -9,3 +9,6 @@ The collection of command line games. My first project on [Hexlet](https://ru.he
 
 • brain-calc
 <a href="https://asciinema.org/a/jInVpYAqQKrfEdq6Zzefalj9e" target="_blank"><img src="https://asciinema.org/a/jInVpYAqQKrfEdq6Zzefalj9e.svg" /></a>
+
+• brain-gcd
+<a href="https://asciinema.org/a/r87PqahwxsYkDebhAxEudi14O" target="_blank"><img src="https://asciinema.org/a/r87PqahwxsYkDebhAxEudi14O.svg" /></a>
