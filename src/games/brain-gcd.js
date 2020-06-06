@@ -12,6 +12,7 @@ export default () => {
     const firstNum = randomNum100();
     const secondNum = randomNum100();
     const correctAnswer = gcd(firstNum, secondNum);
+
     console.log(`${firstNum} and ${secondNum}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === correctAnswer) {

@@ -22,7 +22,8 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-prog": "bin/brain-prog.js",
-    "brain-prime": "bin/brain-prime.js"
+    "brain-prime": "bin/brain-prime.js",
+    "brain-test": "bin/brain-test.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

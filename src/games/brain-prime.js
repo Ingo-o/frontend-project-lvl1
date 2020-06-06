@@ -11,6 +11,7 @@ export default () => {
   for (let i = 1; i <= 3; i += 1) {
     const number = randomNum1000();
     const correctAnswer = isPrime(number);
+
     console.log(`Is ${number} a prime number?`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {

@@ -11,6 +11,7 @@ export default () => {
   for (let i = 1; i <= 3; i += 1) {
     const number = randomNum100();
     const correctAnswer = isEven(number);
+
     console.log(`Is ${number} an even number?`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
