@@ -1,31 +1,26 @@
-import readlineSync from 'readline-sync';
 import { randomNum10, randomOperator, calculator } from '../formulas.js';
+import gameEngine from '../index.js';
 
-// Игра brain-calc
-export default () => {
-  const userName = readlineSync.question('This is a CALCULATOR game! What is your name? ');
-  console.log(`Nice to meet you ${userName}!`);
-  console.log('Now, tell me the result of the expression!');
-  let correctAnswerCount = 0;
+const gameData = [];
+const task = 'Write the result of the expressions:';
 
-  for (let i = 1; i <= 3; i += 1) {
+const generateGameData = () => {
+  for (let i = 0; i < 3; i += 1) {
+    const oneQuestionData = [];
+
     const firstNum = randomNum10();
     const secondNum = randomNum10();
     const operator = randomOperator();
+
+    const question = `${firstNum} ${operator} ${secondNum} = ?`;
     const correctAnswer = calculator(firstNum, secondNum, operator);
 
-    console.log(`${firstNum} ${operator} ${secondNum} = ?`);
-    const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === correctAnswer) {
-      console.log('Correct!');
-      correctAnswerCount += 1;
-    } else {
-      console.log(`"${answer}" is a wrong answer (╯︵╰,) ... Correct answer was "${correctAnswer}".`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-  }
-  if (correctAnswerCount === 3) {
-    console.log(`Congratulations, ${userName}!`);
+    oneQuestionData.push(question);
+    oneQuestionData.push(correctAnswer);
+    gameData.push(oneQuestionData);
   }
 };
+
+generateGameData();
+
+export default () => gameEngine(task, gameData);
