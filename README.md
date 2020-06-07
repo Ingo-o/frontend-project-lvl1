@@ -8,7 +8,9 @@ Hello! My name is Dmitry Ingo Epikhin and this is my first project on [Hexlet](h
 Clone this repository on your  machine and write `sudo npm link` in the project directory.
 
 ## How to play:
-These are five console games. Choose one of them, answer the questions correctly and may the Force be with you! ✊
+These are five console games.
+To choose one of them, write `brain-even`, `brain-calc`, `brain-gcd`, `brain-prime` or `brain-prog` in your console.
+Answer the questions correctly and may the Force be with you! ✊
  
 The videos below show the installation and gameplay, but you don't need to write "exit" at the end!   
 
