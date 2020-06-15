@@ -1,26 +1,46 @@
-import { randomNum10, randomOperator, calculator } from '../formulas.js';
+import randomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
-const gameData = [];
+// Генерация случайного оператора (+, -, *)
+export const randomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[Math.floor(Math.random() * operators.length)];
+};
+
+// Простейшие арифметические операции
+export const calculator = (a, b, oper) => {
+  switch (oper) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
+    case '/':
+      return a / b;
+    default:
+      return NaN;
+  }
+};
+
 const task = 'Write the result of the expressions:';
 
 const generateGameData = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const oneQuestionData = [];
+  const gameData = [];
 
-    const firstNum = randomNum10();
-    const secondNum = randomNum10();
+  // Цикл формирования трех пар "вопрос-ответ"
+  for (let i = 0; i < 3; i += 1) {
+    const firstNum = randomNum(1, 10);
+    const secondNum = randomNum(1, 10);
     const operator = randomOperator();
 
     const question = `${firstNum} ${operator} ${secondNum} = ?`;
     const correctAnswer = calculator(firstNum, secondNum, operator);
 
-    oneQuestionData.push(question);
-    oneQuestionData.push(correctAnswer);
-    gameData.push(oneQuestionData);
+    gameData.push([question, correctAnswer]);
   }
+
+  return gameData;
 };
 
-generateGameData();
-
-export default () => gameEngine(task, gameData);
+export default () => gameEngine(task, generateGameData());

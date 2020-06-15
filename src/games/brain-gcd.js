@@ -1,25 +1,31 @@
-import { gcd, randomNum100 } from '../formulas.js';
+import randomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
-const gameData = [];
+// Нахождение наибольшего общего делителя через алгоритм Евклида
+export const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
+};
+
 const task = 'Write the greatest common divisor (gcd) of given numbers.';
 
 const generateGameData = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const oneQuestionData = [];
+  const gameData = [];
 
-    const firstNum = randomNum100();
-    const secondNum = randomNum100();
+  // Цикл формирования трех пар "вопрос-ответ"
+  for (let i = 0; i < 3; i += 1) {
+    const firstNum = randomNum(1, 100);
+    const secondNum = randomNum(1, 100);
 
     const question = `${firstNum} and ${secondNum}`;
     const correctAnswer = gcd(firstNum, secondNum);
 
-    oneQuestionData.push(question);
-    oneQuestionData.push(correctAnswer);
-    gameData.push(oneQuestionData);
+    gameData.push([question, correctAnswer]);
   }
+
+  return gameData;
 };
 
-generateGameData();
-
-export default () => gameEngine(task, gameData);
+export default () => gameEngine(task, generateGameData());

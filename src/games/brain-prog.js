@@ -1,15 +1,24 @@
-import { randomNum10, progression10 } from '../formulas.js';
+import randomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
-const gameData = [];
+// Построение массива с арифметической прогрессией из 10 чисел
+export const progression10 = (start, step) => {
+  const result = [];
+  for (let i = 0; i < 10; i += 1) {
+    result.push(start + (i * step));
+  }
+  return result;
+};
+
 const task = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const oneQuestionData = [];
+  const gameData = [];
 
-    const progStart = randomNum10();
-    const progStep = randomNum10();
+  // Цикл формирования трех пар "вопрос-ответ"
+  for (let i = 0; i < 3; i += 1) {
+    const progStart = randomNum(1, 10);
+    const progStep = randomNum(1, 10);
     const progression = progression10(progStart, progStep);
     const randomElement = Math.floor(Math.random() * progression.length);
 
@@ -17,12 +26,10 @@ const generateGameData = () => {
     progression[randomElement] = '..';
     const question = `${progression.join(' ')}`;
 
-    oneQuestionData.push(question);
-    oneQuestionData.push(correctAnswer);
-    gameData.push(oneQuestionData);
+    gameData.push([question, correctAnswer]);
   }
+
+  return gameData;
 };
 
-generateGameData();
-
-export default () => gameEngine(task, gameData);
+export default () => gameEngine(task, generateGameData());
