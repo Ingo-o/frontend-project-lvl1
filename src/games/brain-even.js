@@ -1,12 +1,12 @@
-import randomNum from '../randomNumFormula.js';
+import generateRandomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
-// Определение четности числа (yes/no)
-export const isEven = (num) => {
+// Определение четности числа
+const isEven = (num) => {
   if (num % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
 const task = 'Answer "yes" if the number is even. Otherwise answer "no".';
@@ -16,10 +16,10 @@ const generateGameData = () => {
 
   // Цикл формирования трех пар "вопрос-ответ"
   for (let i = 0; i < 3; i += 1) {
-    const number = randomNum(1, 100);
+    const number = generateRandomNum(1, 100);
 
     const question = `Is ${number} an even number?`;
-    const correctAnswer = isEven(number);
+    const correctAnswer = isEven(number) ? 'yes' : 'no';
 
     gameData.push([question, correctAnswer]);
   }

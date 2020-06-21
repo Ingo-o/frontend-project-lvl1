@@ -1,4 +1,4 @@
-import randomNum from '../randomNumFormula.js';
+import generateRandomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
 // Функция определяет, является ли число простым
@@ -23,7 +23,7 @@ const generateGameData = () => {
 
   // Цикл формирования трех пар "вопрос-ответ"
   for (let i = 0; i < 3; i += 1) {
-    const number = randomNum(1, 1000);
+    const number = generateRandomNum(1, 1000);
 
     const question = `Is ${number} a prime number?`;
     const correctAnswer = isPrime(number) ? 'yes' : 'no';

@@ -1,14 +1,14 @@
-import randomNum from '../randomNumFormula.js';
+import generateRandomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
 // Генерация случайного оператора (+, -, *)
-export const randomOperator = () => {
+const generateRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
 // Простейшие арифметические операции
-export const calculator = (a, b, oper) => {
+const expressionCalculate = (a, b, oper) => {
   switch (oper) {
     case '+':
       return a + b;
@@ -30,14 +30,14 @@ const generateGameData = () => {
 
   // Цикл формирования трех пар "вопрос-ответ"
   for (let i = 0; i < 3; i += 1) {
-    const firstNum = randomNum(1, 10);
-    const secondNum = randomNum(1, 10);
-    const operator = randomOperator();
+    const firstNum = generateRandomNum(1, 10);
+    const secondNum = generateRandomNum(1, 10);
+    const operator = generateRandomOperator();
 
     const question = `${firstNum} ${operator} ${secondNum} = ?`;
-    const correctAnswer = calculator(firstNum, secondNum, operator);
+    const correctAnswer = expressionCalculate(firstNum, secondNum, operator);
 
-    gameData.push([question, correctAnswer]);
+    gameData.push([question, String(correctAnswer)]);
   }
 
   return gameData;
