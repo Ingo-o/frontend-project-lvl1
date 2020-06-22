@@ -10,13 +10,15 @@ const generateProgression10 = (start, step) => {
   return result;
 };
 
+// Задание
 const task = 'What number is missing in the progression?';
 
+// Формирования трех пар "вопрос-ответ"
 const generateGameData = () => {
   const gameData = [];
 
-  // Цикл формирования трех пар "вопрос-ответ"
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const progStart = generateRandomNum(1, 10);
     const progStep = generateRandomNum(1, 10);
     const progression = generateProgression10(progStart, progStep);

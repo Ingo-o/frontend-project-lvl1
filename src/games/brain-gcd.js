@@ -9,13 +9,15 @@ const findGCD = (a, b) => {
   return findGCD(b, a % b);
 };
 
+// Задание
 const task = 'Write the greatest common divisor (GCD) of given numbers.';
 
+// Формирования трех пар "вопрос-ответ"
 const generateGameData = () => {
   const gameData = [];
 
-  // Цикл формирования трех пар "вопрос-ответ"
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const firstNum = generateRandomNum(1, 100);
     const secondNum = generateRandomNum(1, 100);
 

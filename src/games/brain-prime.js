@@ -16,13 +16,15 @@ const isPrime = (number) => {
   return true;
 };
 
+// Задание
 const task = 'Answer "yes" if the number is prime. Otherwise answer "no".';
 
+// Формирования трех пар "вопрос-ответ"
 const generateGameData = () => {
   const gameData = [];
 
-  // Цикл формирования трех пар "вопрос-ответ"
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const number = generateRandomNum(1, 1000);
 
     const question = `Is ${number} a prime number?`;

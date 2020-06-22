@@ -1,12 +1,6 @@
 import generateRandomNum from '../randomNumFormula.js';
 import gameEngine from '../index.js';
 
-// Генерация случайного оператора (+, -, *)
-const generateRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
-};
-
 // Простейшие арифметические операции
 const expressionCalculate = (a, b, oper) => {
   switch (oper) {
@@ -23,16 +17,19 @@ const expressionCalculate = (a, b, oper) => {
   }
 };
 
+// Задание
 const task = 'Write the result of the expressions:';
 
+// Формирования трех пар "вопрос-ответ"
 const generateGameData = () => {
   const gameData = [];
 
-  // Цикл формирования трех пар "вопрос-ответ"
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const firstNum = generateRandomNum(1, 10);
     const secondNum = generateRandomNum(1, 10);
-    const operator = generateRandomOperator();
+    const operators = ['+', '-', '*'];
+    const operator = operators[generateRandomNum(0, 2)];
 
     const question = `${firstNum} ${operator} ${secondNum} = ?`;
     const correctAnswer = expressionCalculate(firstNum, secondNum, operator);
