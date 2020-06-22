@@ -19,16 +19,16 @@ The videos below show the installation and gameplay, but you don't need to write
 ## 
 
 • Installation from the local repository and brain-even demonstration:
-[![asciicast](https://asciinema.org/a/uEceyVKxrDJkdos01X7O7p6lk.svg)](https://asciinema.org/a/uEceyVKxrDJkdos01X7O7p6lk)
+![Alt Text](gif/even_and_install.gif)
 
 • brain-calc demonstration:
-[![asciicast](https://asciinema.org/a/N3A1yojBuLj4ztataSqo7u7dY.svg)](https://asciinema.org/a/N3A1yojBuLj4ztataSqo7u7dY)
+![Alt Text](gif/calc.gif)
 
 • brain-gcd demonstration:
-[![asciicast](https://asciinema.org/a/3uoNjSEWFGiK2aIlvC3Coj7hI.svg)](https://asciinema.org/a/3uoNjSEWFGiK2aIlvC3Coj7hI)
+![Alt Text](gif/gcd.gif)
 
 • brain-prog demonstration:
-[![asciicast](https://asciinema.org/a/gAXx91ZvPIvCfkMfe42ot8rTv.svg)](https://asciinema.org/a/gAXx91ZvPIvCfkMfe42ot8rTv)
+![Alt Text](gif/prog.gif)
 
 • brain-prime demonstration:
-[![asciicast](https://asciinema.org/a/PhOYsSq43SwWqukvxrJjtk8aC.svg)](https://asciinema.org/a/PhOYsSq43SwWqukvxrJjtk8aC)
+![Alt Text](gif/prime.gif)
