@@ -1,4 +1,4 @@
-import generateRandomNum from '../randomNumFormula.js';
+import generateRandomNumber from '../randomNumberFormula.js';
 import gameEngine from '../index.js';
 
 // Простейшие арифметические операции
@@ -26,10 +26,10 @@ const generateGameData = () => {
 
   const numberOfQuestions = 3;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const firstNum = generateRandomNum(1, 10);
-    const secondNum = generateRandomNum(1, 10);
+    const firstNum = generateRandomNumber(1, 10);
+    const secondNum = generateRandomNumber(1, 10);
     const operators = ['+', '-', '*'];
-    const operator = operators[generateRandomNum(0, 2)];
+    const operator = operators[generateRandomNumber(0, 2)];
 
     const question = `${firstNum} ${operator} ${secondNum} = ?`;
     const correctAnswer = expressionCalculate(firstNum, secondNum, operator);

@@ -1,10 +1,10 @@
-import generateRandomNum from '../randomNumFormula.js';
+import generateRandomNumber from '../randomNumberFormula.js';
 import gameEngine from '../index.js';
 
 // Построение массива с арифметической прогрессией из 10 чисел
-const generateProgression10 = (start, step) => {
+const generateProgression = (start, step, length) => {
   const result = [];
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     result.push(start + (i * step));
   }
   return result;
@@ -19,14 +19,14 @@ const generateGameData = () => {
 
   const numberOfQuestions = 3;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const progStart = generateRandomNum(1, 10);
-    const progStep = generateRandomNum(1, 10);
-    const progression = generateProgression10(progStart, progStep);
+    const progStart = generateRandomNumber(1, 10);
+    const progStep = generateRandomNumber(1, 10);
+    const progression = generateProgression(progStart, progStep, 10);
     const randomElement = Math.floor(Math.random() * progression.length);
 
     const correctAnswer = progression[randomElement];
     progression[randomElement] = '..';
-    const question = `${progression.join(' ')}`;
+    const question = progression.join(' ');
 
     gameData.push([question, String(correctAnswer)]);
   }

@@ -1,4 +1,4 @@
-import generateRandomNum from '../randomNumFormula.js';
+import generateRandomNumber from '../randomNumberFormula.js';
 import gameEngine from '../index.js';
 
 // Нахождение наибольшего общего делителя через алгоритм Евклида
@@ -18,8 +18,8 @@ const generateGameData = () => {
 
   const numberOfQuestions = 3;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const firstNum = generateRandomNum(1, 100);
-    const secondNum = generateRandomNum(1, 100);
+    const firstNum = generateRandomNumber(1, 100);
+    const secondNum = generateRandomNumber(1, 100);
 
     const question = `${firstNum} and ${secondNum}`;
     const correctAnswer = findGCD(firstNum, secondNum);

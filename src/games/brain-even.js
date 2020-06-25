@@ -1,13 +1,8 @@
-import generateRandomNum from '../randomNumFormula.js';
+import generateRandomNumber from '../randomNumberFormula.js';
 import gameEngine from '../index.js';
 
 // Определение четности числа
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = (num) => num % 2 === 0;
 
 // Задание
 const task = 'Answer "yes" if the number is even. Otherwise answer "no".';
@@ -18,7 +13,7 @@ const generateGameData = () => {
 
   const numberOfQuestions = 3;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const number = generateRandomNum(1, 100);
+    const number = generateRandomNumber(1, 100);
 
     const question = `Is ${number} an even number?`;
     const correctAnswer = isEven(number) ? 'yes' : 'no';

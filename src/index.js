@@ -3,7 +3,8 @@ import readlineSync from 'readline-sync';
 // Игровой движок
 export default (task, gameData) => {
   // Приветствие
-  const userName = readlineSync.question('Welcome to the Brain-Games buddy! What is your name? ');
+  console.log('Welcome to the Brain-Games buddy!');
+  const userName = readlineSync.question('What is your name? ');
   console.log(`Nice to meet you ${userName}!`);
 
   // Объясняем задание
