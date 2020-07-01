@@ -1,4 +1,4 @@
-import generateRandomNumber from '../randomNumberFormula.js';
+import generateRandomNumber from '../generateRandomNumber.js';
 import { numberOfQuestions, gameEngine } from '../index.js';
 
 // Определение четности числа

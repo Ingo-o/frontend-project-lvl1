@@ -1,7 +1,7 @@
-import generateRandomNumber from '../randomNumberFormula.js';
+import generateRandomNumber from '../generateRandomNumber.js';
 import { numberOfQuestions, gameEngine } from '../index.js';
 
-// Построение массива с арифметической прогрессией из 10 чисел
+// Построение массива с арифметической прогрессией
 const generateProgression = (start, step, length) => {
   const result = [];
   for (let i = 0; i < length; i += 1) {
